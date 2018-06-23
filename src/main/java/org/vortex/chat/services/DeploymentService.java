@@ -1,6 +1,7 @@
 package org.vortex.chat.services;
 
 import org.vortex.chat.verticles.MessageVerticle;
+import org.vortex.chat.verticles.MongoClientVerticle;
 import org.vortex.chat.verticles.RegistrationVerticle;
 
 import io.vertx.core.Vertx;
@@ -21,7 +22,8 @@ public class DeploymentService implements Service{
 
 	@Override
 	public void startService() {
-		
+
+//		vertx.deployVerticle(new MongoClientVerticle());
 		vertx.deployVerticle(new RegistrationVerticle());
 		vertx.deployVerticle(new MessageVerticle(vertx));
 		

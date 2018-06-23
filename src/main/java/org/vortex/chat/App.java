@@ -17,6 +17,7 @@ public class App {
     	// start deployment
     	DeploymentService deploymentService = new DeploymentService();
     	deploymentService.startService();
+
     	ServiceFactory.setDeploymentService(deploymentService);
     }
 }
