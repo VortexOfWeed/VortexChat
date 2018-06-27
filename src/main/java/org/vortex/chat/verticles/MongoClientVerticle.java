@@ -1,12 +1,21 @@
 package org.vortex.chat.verticles;
 
-import com.sun.tools.internal.jxc.SchemaGenerator;
+import org.vortex.chat.services.ConfigService;
+import org.vortex.chat.services.Constants;
+import org.vortex.chat.services.ServiceFactory;
+
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.mongo.MongoClient;
 
 public class MongoClientVerticle extends AbstractVerticle {
+	
+	ConfigService configService = null;
+	
+	public MongoClientVerticle() {
+		configService = ServiceFactory.getConfigService();
+	}
 
     @Override
     public void start() throws Exception {
@@ -15,7 +24,7 @@ public class MongoClientVerticle extends AbstractVerticle {
 
         String uri = config.getString("mongo_uri");
         if (uri == null) {
-            uri = "mongodb://localhost:27017";
+            uri = Constants.MONGO_PROTOCOL + "://" + configService.getProperty(Constants.MONGO_HOST) + ":" + configService.getProperty(Constants.MONGO_PORT);
         }
         String db = config.getString("mongo_db");
         if (db == null) {

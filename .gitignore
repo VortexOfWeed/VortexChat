@@ -3,3 +3,5 @@ build/
 .idea/
 out/
 VortexChat.iml
+lib/
+*.class

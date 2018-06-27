@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/bson-3.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/jackson-core-2.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/jackson-databind-2.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/mongodb-driver-async-3.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/mongodb-driver-core-3.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-buffer-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-codec-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-codec-dns-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-codec-http2-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-codec-http-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-codec-socks-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-common-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-handler-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-handler-proxy-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-resolver-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-resolver-dns-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/netty-transport-4.1.15.Final.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/vertx-config-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/vertx-core-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/vertx-mongo-client-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/vertx-unit-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/VortexOfWeed/VortexChat/lib/tools.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
