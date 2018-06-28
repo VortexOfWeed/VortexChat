@@ -1,9 +1,9 @@
 package org.vortex.chat;
 
 import org.vortex.chat.services.ConfigService;
-import org.vortex.chat.services.Constants;
 import org.vortex.chat.services.DeploymentService;
 import org.vortex.chat.services.ServiceFactory;
+import org.vortex.chat.utils.Constants;
 
 public class App {
 	

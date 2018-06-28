@@ -1,5 +1,7 @@
 package org.vortex.chat.services;
 
+import org.vortex.chat.utils.Constants;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -27,8 +29,11 @@ public class ConfigService implements Service {
 	@Override
 	public void startService() {
 		InputStream stream = null;
+		properties = new Properties();
 		try {
-			stream = new FileInputStream(new File(Constants.CONFIG_FILE_PATH));
+//			stream = new FileInputStream(new File(Constants.CONFIG_FILE_PATH));
+			stream = new FileInputStream(new File(System.getProperty("user.dir")
+					+ File.separator + Constants.CONFIG_FILE_PATH));
 			properties.load(stream);
 		} catch (IOException e) {
 			e.printStackTrace();

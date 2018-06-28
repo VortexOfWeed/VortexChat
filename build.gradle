@@ -27,6 +27,8 @@ dependencies {
 
   compile "io.vertx:vertx-config:$vertxVersion"
 
+  compile "io.vertx:vertx-web:$vertxVersion"
+
 }
 
 mainClassName = 'org.vortex.chat.MainVerticle'

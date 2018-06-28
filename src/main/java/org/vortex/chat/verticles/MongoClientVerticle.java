@@ -1,7 +1,7 @@
 package org.vortex.chat.verticles;
 
 import org.vortex.chat.services.ConfigService;
-import org.vortex.chat.services.Constants;
+import org.vortex.chat.utils.Constants;
 import org.vortex.chat.services.ServiceFactory;
 
 import io.vertx.core.AbstractVerticle;
@@ -24,7 +24,8 @@ public class MongoClientVerticle extends AbstractVerticle {
 
         String uri = config.getString("mongo_uri");
         if (uri == null) {
-            uri = Constants.MONGO_PROTOCOL + "://" + configService.getProperty(Constants.MONGO_HOST) + ":" + configService.getProperty(Constants.MONGO_PORT);
+            uri = Constants.MONGO_PROTOCOL + "://" + configService.getProperty(Constants.MONGO_HOST)
+                    + ":" + configService.getProperty(Constants.MONGO_PORT);
         }
         String db = config.getString("mongo_db");
         if (db == null) {

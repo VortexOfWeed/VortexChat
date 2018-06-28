@@ -10,22 +10,9 @@ import io.vertx.core.http.HttpMethod;
  */
 public class MessageVerticle extends AbstractVerticle{
 	
-	Vertx vertx;
-	
-	public MessageVerticle(Vertx vertx) {
-		this.vertx = vertx;
-	}
-	
 	@Override
     public void start() throws Exception {
-		
         vertx.createHttpServer().requestHandler(req -> {
-
-        	/*
-				// get message and recipient from request body
-				// vertx.deployVerticle(new MessageSenderVerticle());
-        	 */
-
             if(req.method() == HttpMethod.POST){
                 req.handler(buffer -> {
 
@@ -34,8 +21,8 @@ public class MessageVerticle extends AbstractVerticle{
               req.response()
                 .putHeader("content-type", "text/plain")
                 .end("Hello from Vert.x!");
-            }).listen(8080);
-        System.out.println("HTTP server started on port 8080");
+            }).listen(8081);
+        System.out.println("Message Verticle started on port 8081");
     }
 
 }
