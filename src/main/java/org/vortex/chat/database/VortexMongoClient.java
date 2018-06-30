@@ -1,4 +1,4 @@
-package org.vortex.chat.verticles;
+package org.vortex.chat.database;
 
 import org.vortex.chat.services.ConfigService;
 import org.vortex.chat.utils.Constants;
@@ -9,16 +9,16 @@ import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.mongo.MongoClient;
 
-public class MongoClientVerticle extends AbstractVerticle {
+public class VortexMongoClient {
+	
+	ConfigService configService = null;
+	MongoClient mongoClient = null;
 
-    ConfigService configService = null;
+	public VortexMongoClient(Vertx vertx){
+	    if (mongoClient != null){
 
-    public MongoClientVerticle() {
+        }
         configService = ServiceFactory.getConfigService();
-    }
-
-    @Override
-    public void start() throws Exception {
 
         JsonObject config = Vertx.currentContext().config();
 
@@ -29,13 +29,16 @@ public class MongoClientVerticle extends AbstractVerticle {
         }
         String db = config.getString("mongo_db");
         if (db == null) {
-            db = "vortexdb";
+            db = Constants.DB_NAME;
         }
 
         JsonObject mongoconfig = new JsonObject()
                 .put("connection_string", uri)
                 .put("db_name", db);
 
-        MongoClient mongoClient = MongoClient.createShared(vertx, mongoconfig);
+        mongoClient = MongoClient.createShared(vertx, mongoconfig);
     }
+
+
+
 }

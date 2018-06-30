@@ -3,6 +3,7 @@ package org.vortex.chat.verticles;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.http.HttpServerResponse;
 import io.vertx.core.json.JsonObject;
+import io.vertx.ext.mongo.MongoClient;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.ext.web.handler.BodyHandler;
@@ -23,6 +24,8 @@ public class RegistrationVerticle extends AbstractVerticle{
                 .requestHandler(router::accept)
                 .listen(8082, "0.0.0.0");
         System.out.println("Registration Verticle started on port 8082");
+
+
     }
 
 

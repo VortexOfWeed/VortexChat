@@ -10,5 +10,6 @@ public class Constants {
 	public static final String MONGO_HOST = "mongo.host";
 	public static final String MONGO_PORT = "mongo.port";
 	public static final String MONGO_PROTOCOL = "mongodb";
+	public static final String DB_NAME = "vortexdb";
 
 }
